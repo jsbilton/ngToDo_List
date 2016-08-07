@@ -19,9 +19,6 @@ function todoApp() {
           <p ng-dblclick="showEditField = true;" ng-hide="showEditField">
             {{ item.title }}
           </p>
-          <div ng-show="showEditField">
-            <input type="text" ng-model="item.title" ng-blur="todo.updateTodo(item, $index); showEditField = false;" todo-autofocus="showEditField">
-          </div>
           <a href="" ng-click="todo.removeTodo(item, $index);">
             &#x02717;
           </a>
