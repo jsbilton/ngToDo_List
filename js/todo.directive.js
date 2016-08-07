@@ -10,7 +10,7 @@ function todoApp() {
     template: `
     <div class="todo">
       <form class="todo__form" ng-submit="todo.addTodo();">
-        <input type="text" placeholder="Insert ya todo yahoo" ng-model="todo.newTodo">
+        <input type="text" placeholder="Insert New To Do" ng-model="todo.newTodo">
       </form>
       <ul class="todo__list">
         <li ng-repeat="item in todo.list">
@@ -20,7 +20,7 @@ function todoApp() {
             {{ item.title }}
           </p>
           <div ng-show="showEditField">
-            <input type="text" ng-model="item.title" ng-blur="todo.updateTodo(item, $index); showEditField = false;" todo-autofocus="showEditField">
+            <input type="text" ng-model="item.title">
           </div>
           <a href="" ng-click="todo.removeTodo(item, $index);">
             &#x02717;
