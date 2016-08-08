@@ -3,7 +3,7 @@
 
 
 function TodoService ($http) {
-  var API = 'http://tiny-tiny.herokuapp.com/collections/myTodo';
+  var API = 'https://tiny-tiny.herokuapp.com/collections/myTodo';
 
   function create(todo){
     return $http.post(API, todo).then(function (response) {
